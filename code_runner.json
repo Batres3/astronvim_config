@@ -1,0 +1,4 @@
+{
+  "python": "python3 -u",
+  "cpp": "cd $dir && g++ $fileName && ./a.out && rm a.out"
+}
