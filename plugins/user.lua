@@ -28,16 +28,28 @@ return {
     },
     event = "User AstroFile",
     keys = {
-      {'<leader>rf', ':RunFile<CR>', desc = "Run the current file (optionally you can select an opening mode)."},
-      {'<leader>rp', ':RunProject<CR>', desc = "Run the current project(If you are in a project otherwise you will not do anything,)."},
-      {'<leader>rc', ':RunClose<CR>', desc = "Close runner(Doesn't work in better_term mode, use native plugin options)"},
-      {'<leader>crf', ':CRFiletype<CR>', desc = "Open json with supported files(Use only if you configured with json files)."},
-      {'<leader>crp', ':CRProjects<CR>', desc = "Open json with list of projects(Use only if you configured with json files)."}
+      {'<leader>rf', ':RunFile<CR>', desc = "Run the current file (optionally you can select an opening mode)."}, {'<leader>rp', ':RunProject<CR>', desc = "Run the current project(If you are in a project otherwise you will not do anything,)."}, {'<leader>rc', ':RunClose<CR>', desc = "Close runner(Doesn't work in better_term mode, use native plugin options)"}, {'<leader>crf', ':CRFiletype<CR>', desc = "Open json with supported files(Use only if you configured with json files)."}, {'<leader>crp', ':CRProjects<CR>', desc = "Open json with list of projects(Use only if you configured with json files)."} } }, { "mg979/vim-visual-multi", event = "VeryLazy", }, { "tikhomirov/vim-glsl", event = "User AstroFile",
+  },
+  {
+    "Badhi/nvim-treesitter-cpp-tools",
+    event = "VeryLazy",
+    dependencies = {"nvim-treesitter/nvim-treesitter"},
+    opts = {
+      preview = {
+          quit = 'q', -- optional keymapping for quit preview
+          accept = '<tab>' -- optional keymapping for accept preview
+      },
+      header_extension = 'h', -- optional
+      source_extension = 'cxx', -- optional
     }
   },
   {
-    "mg979/vim-visual-multi",
-    event = "VeryLazy",
+    "jakemason/ouroboros",
+    dependencies = {"nvim-lua/plenary.nvim"},
+    event = "User AstroFile",
+    keys = {
+      { "<C-k>", ":Ouroboros<CR>"},
+    }
   },
   {
     "ray-x/lsp_signature.nvim",
