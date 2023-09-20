@@ -12,6 +12,11 @@ return {
     ["n"] = { "nzzzv", desc = "When cycling through selections cursor stays in the middle of the screen"},
     ["N"] = { "Nzzzv", desc = "When cycling through selections cursor stays in the middle of the screen" },
     ["<leader>s"] = { ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", desc = "Find and replace current word" },
+    ["<leader>rr"] = { ":MagmaEvaluateLine<CR>" , desc = "Evaluate the current line"},
+    ["<leader>rc"] = { ":MagmaReevaluateLine<CR>" , desc = "Evaluate the current cell"},
+    ["<leader>rd"] = { ":MagmaDelete<CR>" , desc = "Delete the current cell"},
+    ["<leader>ro"] = { ":MagmaShowOutput<CR>" , desc = "Show output of current cell"},
+    ["<leader>rq"] = { ":noautocmd MagmaEnterOutput<CR>" , desc = "Enter output window"},
     -- second key is the lefthand side of the map
 
     -- navigate buffer tabs with `H` and `L`
@@ -47,6 +52,7 @@ return {
   },
   x = {
     ["<leader>p"] = { "\"_dP", desc = "Paste selection into void register"},
+    ["<leader>r"] = { ":<C-u>MagmaEvaluateVisual<CR>" , desc = "Evaluate the current selection"},
   },
   t = {
     -- setting a mapping to false will disable it
