@@ -3,5 +3,9 @@
         "name": "Hazel Engine",
         "description": "Engine made following TheCherno's YouTube Tutorial",
         "command": "./scripts/Linux-GenMakefiles.sh && make && cd Sandbox && ../bin/Debug-linux-x86_64/Sandbox/Sandbox && cd .."
+      },
+      "~/Dev/Lab-Helper": {
+        "name": "Lab-Helper",
+        "command": "pip uninstall labhelper -y && pip install labhelper"
       }
 }
