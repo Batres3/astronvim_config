@@ -1,11 +1,15 @@
 {
-      "~/Dev/EngineCherno": {
+      "~/Dev/Bath": {
         "name": "Hazel Engine",
         "description": "Engine made following TheCherno's YouTube Tutorial",
-        "command": "./scripts/Linux-GenMakefiles.sh && make && cd Sandbox && ../bin/Debug-linux-x86_64/Sandbox/Sandbox && cd .."
+        "command": "make -j8 && cd Bathtub && ../bin/Debug-linux-x86_64/Bathtub/Bathtub && cd .."
       },
       "~/Dev/Lab-Helper": {
         "name": "Lab-Helper",
-        "command": "pip uninstall labhelper -y && pip install labhelper"
+        "command": "pip uninstall labhelper -y && pip install ."
+      },
+      "~/Dev/RandomPythonStuff/PresentationEM" : {
+        "name" : "Presentation",
+        "command" : "manim -ql presentation.py Test && vlc media/videos/presentation/480p15/Test.mp4"
       }
 }
